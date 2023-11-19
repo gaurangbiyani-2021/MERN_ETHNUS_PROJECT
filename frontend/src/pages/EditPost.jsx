@@ -25,7 +25,7 @@ const EditPost = () => {
 
     const fetchPost = async ()=>{
         try {
-            const res = await axios.get("http://localhost:8800/api/posts/"+postId); 
+            const res = await axios.get("https://newsify-3azj.onrender.com/api/posts/"+postId); 
             console.log(res.data);
             setTitle(res.data.title);
             setDesc(res.data.desc);
@@ -71,7 +71,7 @@ const EditPost = () => {
           // console.log(data)
           //img upload
           try{
-            const imgUpload=await axios.post("http://localhost:8800/api/upload",data)
+            const imgUpload=await axios.post("https://newsify-3azj.onrender.com/api/upload",data)
             // console.log(imgUpload.data)
           }
           catch(err){
@@ -81,7 +81,7 @@ const EditPost = () => {
         //post upload
        
         try{
-          const res=await axios.put("http://localhost:8800/api/posts/"+postId,post,{withCredentials:true})
+          const res=await axios.put("https://newsify-3azj.onrender.com/api/posts/"+postId,post,{withCredentials:true})
           navigate("/posts/post/"+res.data._id)
           // console.log(res.data)
   

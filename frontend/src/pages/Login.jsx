@@ -15,7 +15,7 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       //fetch api
-      const result = await axios.post('http://localhost:8800/api/auth/login', { email, password }, { withCredentials: true });
+      const result = await axios.post('https://newsify-3azj.onrender.com/api/auth/login', { email, password }, { withCredentials: true });
       setUser(result.data);
       console.log('login successful');
       navigate("/");

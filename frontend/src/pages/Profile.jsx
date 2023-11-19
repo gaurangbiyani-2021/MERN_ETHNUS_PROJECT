@@ -23,7 +23,7 @@ const Profile = () => {
 
   const fetchProfile = async() =>{
     try {
-      const res = await axios.get("http://localhost:8800/api/users/"+user._id);
+      const res = await axios.get("https://newsify-3azj.onrender.com/api/users/"+user._id);
       setUsername(res.body.username);
       setEmail(res.body.email);
       setPassword(res.body.password);
@@ -40,7 +40,7 @@ const Profile = () => {
   const handleUpdate = async () =>{
     setUpdated(false);
     try {
-        const res = await axios.put("http://localhost:8800/api/users/"+user._id,{username,email,password},{withCredentials:true});
+        const res = await axios.put("https://newsify-3azj.onrender.com/api/users/"+user._id,{username,email,password},{withCredentials:true});
         console.log(res.data);
         setUpdated(true);
     } catch (error) {
@@ -52,7 +52,7 @@ const Profile = () => {
   const handleDelete = async () =>{
     try{
 
-      const res = await axios.delete("http://localhost:8800/api/users/"+user._id,{withCredentials:true});
+      const res = await axios.delete("https://newsify-3azj.onrender.com/api/users/"+user._id,{withCredentials:true});
       setUser(null);
       navigate("/");
 

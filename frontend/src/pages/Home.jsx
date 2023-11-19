@@ -19,7 +19,7 @@ const Home = () => {
   const fetchPosts = async ()=> {
     setLoader(true);
     try {
-        const res = await axios.get("http://localhost:8800/api/posts/"+search);
+        const res = await axios.get("https://newsify-3azj.onrender.com/api/posts/"+search);
         console.log(res.data);
         setPosts(res.data);
         if(res.data.length ===0){

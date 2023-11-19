@@ -58,7 +58,7 @@ const CreatePost = () => {
             
             try {
                 // Upload image and other form data
-                const imgUpload = await axios.post("http://localhost:8800/api/posts/create", data, {
+                const imgUpload = await axios.post("https://newsify-3azj.onrender.com/api/posts/create", data, {
                     headers: {
                         "Authorization": "Bearer YOUR_ACCESS_TOKEN",
                         "Content-Type": "multipart/form-data"
@@ -74,7 +74,7 @@ const CreatePost = () => {
     
         // try {
         //     // You might need to adjust the endpoint and headers based on your API
-        //     const res = await axios.post("http://localhost:8800/api/posts/create", post, { withCredentials: true });
+        //     const res = await axios.post("https://newsify-3azj.onrender.com/api/posts/create", post, { withCredentials: true });
         //     console.log("Post created successfully");
         //     navigate("/posts/post/" + res.data._id);
         // } catch (err) {

@@ -11,7 +11,7 @@ const Comment = ({c,post}) => {
 
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete("http://localhost:8800/api/comments/"+id,{withCredentials:true})
+      const res = await axios.delete("https://newsify-3azj.onrender.com/api/comments/"+id,{withCredentials:true})
       window.location.reload(true);
 
     } catch (error) {

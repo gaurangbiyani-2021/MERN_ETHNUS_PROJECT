@@ -1,1 +1,1 @@
-export const IMGURL = "http://localhost:8800/images/"
+export const IMGURL = "https://newsify-3azj.onrender.com/images/"

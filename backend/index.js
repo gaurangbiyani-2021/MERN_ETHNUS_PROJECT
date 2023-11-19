@@ -37,7 +37,7 @@ app.listen(8800, () => {
     connectDB();
     console.log("connected to server !");
 });
-
+//localhost:8800/api/auth
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);

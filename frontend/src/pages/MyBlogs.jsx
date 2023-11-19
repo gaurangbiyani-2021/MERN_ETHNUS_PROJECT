@@ -20,7 +20,7 @@ const MyBlogs = () => {
   const fetchPosts=async()=>{
     setLoader(true)
     try{
-      const res=await axios.get("http://localhost:8800/api/posts/user/"+user._id)
+      const res=await axios.get("https://newsify-3azj.onrender.com/api/posts/user/"+user._id)
       // console.log(res.data)
       setPosts(res.data)
       if(res.data.length===0){

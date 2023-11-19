@@ -12,7 +12,7 @@ const Register = () => {
   const handleRegister = async () => {
     try {
       // Fetch API
-      const result = await axios.post('http://localhost:8800/api/auth/register', {
+      const result = await axios.post('https://newsify-3azj.onrender.com/api/auth/register', {
         username,
         email,
         password,

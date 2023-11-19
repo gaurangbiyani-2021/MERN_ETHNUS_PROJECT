@@ -35,7 +35,7 @@ const PostDetails = () => {
 
     const fetchPost = async ()=>{
         try {
-            const res = await axios.get("http://localhost:8800/api/posts/"+postId); 
+            const res = await axios.get("https://newsify-3azj.onrender.com/api/posts/"+postId); 
             setTitle(res.data.title);
             setDesc(res.data.desc);
             setFile(res.data.photo);
@@ -67,7 +67,7 @@ const PostDetails = () => {
         console.log("post >>>>> "+post);
 
         try{
-            const res=await axios.put("http://localhost:8800/api/posts/"+postId,post,{withCredentials:true})
+            const res=await axios.put("https://newsify-3azj.onrender.com/api/posts/"+postId,post,{withCredentials:true})
             navigate("/posts/post/"+res.data._id)
             console.log("result : " + res.data)
     
@@ -98,13 +98,13 @@ const PostDetails = () => {
         console.log("post >>>>> "+dislike);
 
         if(dislike >10){
-            const res = await axios.delete("http://localhost:8800/api/posts/"+postId,{withCredentials:true});
+            const res = await axios.delete("https://newsify-3azj.onrender.com/api/posts/"+postId,{withCredentials:true});
             // window.location.reload(true);
             navigate("/")
         }
 
         try{
-            const res=await axios.put("http://localhost:8800/api/posts/"+postId,post,{withCredentials:true})
+            const res=await axios.put("https://newsify-3azj.onrender.com/api/posts/"+postId,post,{withCredentials:true})
             navigate("/posts/post/"+res.data._id)
             console.log("result : " + res.data)
     
@@ -117,7 +117,7 @@ const PostDetails = () => {
 
     const fetchPosts = async () => {
         try {
-            const res = await axios.get("http://localhost:8800/api/posts/"+postId);
+            const res = await axios.get("https://newsify-3azj.onrender.com/api/posts/"+postId);
             console.log(res.data);
             setPost(res.data);
         } catch (error) {
@@ -131,7 +131,7 @@ const PostDetails = () => {
 
     const handleDeletePost = async () => {
         try {   
-            const res = await axios.delete("http://localhost:8800/api/posts/" + postId,{withCredentials:true});
+            const res = await axios.delete("https://newsify-3azj.onrender.com/api/posts/" + postId,{withCredentials:true});
             console.log("deleted successfully");
             navigate("/");
         } catch (error) {
@@ -141,7 +141,7 @@ const PostDetails = () => {
 
     const fetchPostComments = async () => {
         try {
-            const res = await axios.get("http://localhost:8800/api/comments/post/"+postId);
+            const res = await axios.get("https://newsify-3azj.onrender.com/api/comments/post/"+postId);
             setComments(res.data);
 
         } catch (error) {
@@ -158,7 +158,7 @@ const PostDetails = () => {
         e.preventDefault();
 
         try {
-            const res = await axios.post("http://localhost:8800/api/comments/create",{comment:comment,author:user.username,postId:postId,userId:user._id},{withCredentials:true});
+            const res = await axios.post("https://newsify-3azj.onrender.com/api/comments/create",{comment:comment,author:user.username,postId:postId,userId:user._id},{withCredentials:true});
             console.log(res.data);
             fetchPostComments();
             setComment("");
