@@ -56,7 +56,7 @@ const PostDetails = () => {
         const post ={
             title,
             desc,
-            username:user.username,
+            // username:user.username,
             userId:user._id,
             categories:cats,
             like:like+1
@@ -83,7 +83,7 @@ const PostDetails = () => {
         const post ={
             title,
             desc,
-            username:user.username,
+            // username:user.username,
             userId:user._id,
             categories:cats,
             dislike:dislike+1
