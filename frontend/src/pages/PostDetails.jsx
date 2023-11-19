@@ -18,7 +18,7 @@ import { Navigate, useNavigate } from 'react-router-dom'
 const PostDetails = () => {
     const postId = useParams().id;
     console.log("postId is : " + postId)
-
+    const [hasLiked, setHasLiked] = useState(false);
     const [post,setPost] = useState([])
     const {user} = useContext(UserContext);
     const navigate = useNavigate();
@@ -52,7 +52,8 @@ const PostDetails = () => {
 
   
     const handleLikeClick = async () => {
-     
+        
+        if(!hasLiked){
         const post ={
             title,
             desc,
@@ -62,6 +63,7 @@ const PostDetails = () => {
             like:like+1
         }
         setLike(like +1);
+        setHasLiked(true);
         console.log("post >>>>> "+post);
 
         try{
@@ -71,9 +73,13 @@ const PostDetails = () => {
     
         }
         catch(err){
+           
+            console.log("user has already liked the post")
             console.log(err)
         }
-
+    }else{
+        console.log('User has already liked the post.');
+    }
 
       console.log(like);
     };
