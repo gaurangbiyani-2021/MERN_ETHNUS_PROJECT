@@ -10,6 +10,7 @@ import CreatePost from './pages/CreatePost'
 import EditPost from './pages/EditPost'
 import Profile from './pages/Profile'
 import MyBlogs from './pages/MyBlogs'
+import Team from './pages/Team'
 
 import { UserContextProvider } from './context/UserContext'
 
@@ -25,7 +26,7 @@ export default function App() {
     <UserContextProvider>
         <Routes>
           
-          <Route exact path='/dashboard' element={<dash/>}/> 
+          <Route exact path='/team' element={<Team/>}/> 
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/login" element={<Login/>}/>
           <Route exact path="/register" element={<Register/>}/>
