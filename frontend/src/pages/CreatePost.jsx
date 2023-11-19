@@ -66,6 +66,7 @@ const CreatePost = () => {
                 });
                 console.log(imgUpload.data);
                 console.log("Image uploaded successfully");
+                navigate("/");
             } catch (err) {
                 console.log(err);
             }
