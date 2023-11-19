@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import ProfilePosts from '../components/ProfilePosts'
 import { useState,useEffect} from "react"
 import { useContext } from "react"
 import { UserContext} from "../context/UserContext"
@@ -83,21 +82,20 @@ const Profile = () => {
   return (
     <div>
       <Navbar/>
-      <div className='px-8 md:px-[200px] mt-8 flex md:flex-row flex-col-reverse md:items-start items-start'>
-        <div className='flex flex-col md:w-[70%] w-full mt-8 md:mt-0'>
+      <div className='px-8 md:px-[200px] mt-8 flex md:flex-row flex-col-reverse md:items-start items-center'>
+        {/* <div className='flex flex-col md:w-[70%] w-full mt-8 md:mt-0'>
           <h1 className='text-xl font-bold mb-4'>Your Posts</h1>
             {posts?.map((p)=>(
               <ProfilePosts key={p._id} p={p}/>
             ))}
-        </div>
+        </div> */}
 
-        <div className='md:sticky top-0 flex justify-start md:justify-end items-start md:w-[30%] w-full md:items-end'>
+        <div className='md:sticky top-0 flex justify-start md:justify-end items-center md:w-[30%] w-full md:items-end'>
          
           <div className=" flex flex-col space-y-4 items-start">  
             <h1 className="text-xl font-bold mb-4">Profile</h1>
             <input onChange={(e)=>setUsername(e.target.value)} value={username} className="outline-none px-4 py-2 text-gray-500" placeholder="Your username" type="text"/>
             <input onChange={(e)=>setEmail(e.target.value)} value={email} className="outline-none px-4 py-2 text-gray-500" placeholder="Your email" type="email"/>
-            {/* <input onChange={(e)=>setPassword(e.target.value)} value={password} className="outline-none px-4 py-2 text-gray-500" placeholder="Your password" type="password"/> */}
             <div className="flex items-center space-x-4 mt-8">
             <button onClick={handleUpdate} className="text-white font-semibold bg-black px-4 py-2 hover:text-black hover:bg-gray-400">Update</button>
             <button onClick={handleDelete} className="text-white font-semibold bg-black px-4 py-2 hover:text-black hover:bg-gray-400">Delete</button>
@@ -105,6 +103,7 @@ const Profile = () => {
           {updated && <h3 className="text-green-500 text-sm text-center mt-4">user updated successfully!</h3>}
         </div>
       </div>
+      <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
     </div>
       <Footer/>
     </div>

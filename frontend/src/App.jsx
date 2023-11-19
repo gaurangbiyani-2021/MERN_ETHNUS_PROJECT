@@ -11,6 +11,7 @@ import EditPost from './pages/EditPost'
 import Profile from './pages/Profile'
 import MyBlogs from './pages/MyBlogs'
 import Team from './pages/Team'
+import ContactUs from './pages/ContactUs'
 
 import { UserContextProvider } from './context/UserContext'
 
@@ -25,7 +26,7 @@ export default function App() {
     
     <UserContextProvider>
         <Routes>
-          
+          <Route exact path='/contactUs' element={<ContactUs />}/>
           <Route exact path='/team' element={<Team/>}/> 
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/login" element={<Login/>}/>

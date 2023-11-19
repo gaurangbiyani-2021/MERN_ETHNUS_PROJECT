@@ -65,8 +65,8 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container">
-        <h1>NEWSIFY</h1>
-        {/* Add more navbar items if needed */}
+        {/* <h1>NEWSIY</h1> */}
+        <a href='/'>Newsify</a>
       </div>
     </nav>
   );
