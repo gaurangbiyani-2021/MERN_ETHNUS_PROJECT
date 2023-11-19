@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/team.css'
+import { RiLinkedinLine, RiGithubLine } from 'react-icons/ri';
 import team01 from '../images/team-01.png'
 import team02 from '../images/team-02.png'
 import team03 from '../images/team-03.png'
@@ -60,39 +61,67 @@ const teamMembers = [
     },
 ]
 
+const Navbar = () => {
+  return (
+    <nav className="navbar">
+      <div className="container">
+        <h1>NEWSIFY</h1>
+        {/* Add more navbar items if needed */}
+      </div>
+    </nav>
+  );
+};
+
 const Team = () => {
-    return (
-        <section className='our__team'>
-            <div className='container'>
-                <div className='team__content'>
-                    <h5 className='subtitle'> Team</h5>
-                    <h2>
-                        The Team <span className='highlight'>Behind</span>
-                    </h2>
-                </div>
-                <div className='team__wrapper'>
-                    {
-                        teamMembers.map((item, index) => (
-                            <div className='team__item' key={index}>
-                                <div className='team__img'>
-                                    <img src={item.imgUrl} alt='' />
-                                </div>
-                                <div className='team__details'>
-                                    <h4>{item.name}</h4>
-                                    <p className='description'>{item.position}</p>
+  return (
+    <div>
+      <Navbar />
+      <section className="our__team">
+        <div className="container">
+          <div className="team__content">
 
-                                    <div className='team__member-social'>
-                                        <span> <a href={item.social.linkedin} target='_blank' rel='noopener noreferrer'><i class='ri-linkedin-line'></i></a></span>
-                                        <span> <a href={item.social.github} target='_blank' rel='noopener noreferrer'><i class='ri-github-line'></i></a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        ))
-                    }
+            <h2>
+              THE TEAM <span className="highlight">BEHIND</span>
+            </h2>
+          </div>
+          <div className="team__wrapper">
+            {teamMembers.map((item, index) => (
+              <div className="team__item" key={index}>
+                <div className="team__img">
+                  <img src={item.imgUrl} alt="" />
                 </div>
-            </div>
-        </section>
-    )
-}
+                <div className="team__details">
+                  <h4>{item.name}</h4>
+                  <p className="description">{item.position}</p>
 
-export default Team
+                  <div className="team__member-social">
+                    <span>
+                      <a
+                        href={item.social.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="ri-linkedin-line"></i>
+                      </a>
+                    </span>
+                    <span>
+                      <a
+                        href={item.social.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="ri-github-line"></i>
+                      </a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Team;
