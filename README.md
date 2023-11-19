@@ -1,4 +1,4 @@
 # P41
 # Newsify
-# mern_ehtnus_project
+# mern_ethnus_project
 # MERN_ETHNUS_PROJECT
