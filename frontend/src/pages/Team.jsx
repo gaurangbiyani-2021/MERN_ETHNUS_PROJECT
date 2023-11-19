@@ -80,19 +80,19 @@ const Team = () => {
         <div className="container">
           <div className="team__content">
 
-            <h2>
+            <h2 className='text-center'>
               THE TEAM <span className="highlight">BEHIND</span>
             </h2>
           </div>
           <div className="team__wrapper">
             {teamMembers.map((item, index) => (
-              <div className="team__item" key={index}>
+              <div className="team__item  " key={index}>
                 <div className="team__img">
                   <img src={item.imgUrl} alt="" />
                 </div>
-                <div className="team__details">
-                  <h4>{item.name}</h4>
-                  <p className="description">{item.position}</p>
+                <div className="team__details text-lg ">
+                  <h4><b>{item.name}</b></h4>
+                  <p className="description"><b>{item.position}</b></p>
 
                   <div className="team__member-social">
                     <span>
@@ -101,7 +101,7 @@ const Team = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <i className="ri-linkedin-line"></i>
+                        <i className="ri-linkedin-line "><RiLinkedinLine/></i>
                       </a>
                     </span>
                     <span>
@@ -110,7 +110,7 @@ const Team = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <i className="ri-github-line"></i>
+                        <i className="ri-github-line"><RiGithubLine/></i>
                       </a>
                     </span>
                   </div>
