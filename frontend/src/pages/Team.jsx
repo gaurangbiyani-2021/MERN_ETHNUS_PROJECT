@@ -33,7 +33,7 @@ const teamMembers = [
     {
         imgUrl: team03,
         name: 'Niket Suchak',
-        position: 'Backend Developer',
+        position: 'Fullstack Developer',
         social: {
             linkedin: 'https://www.linkedin.com/in/niket-suchak/',
             github: 'https://github.com/niketsuchak',
