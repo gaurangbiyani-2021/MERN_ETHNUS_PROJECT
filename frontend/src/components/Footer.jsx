@@ -11,7 +11,8 @@ const Footer = () => {
          <a href="/about">About Us</a>
        </div>
     </div>
-    <p className="py-2 pb-6 text-center text-white bg-blue-500 text-sm" >All @NEWS WEBAPP 2023</p>
+    
+    <p className="py-2 pb-6 text-center text-white bg-black text-sm" >All @NEWS WEBAPP 2023</p>
     </>
     
   )
