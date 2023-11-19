@@ -21,7 +21,7 @@ const ContactUs = () => {
       setEmail(result.data.email);
       setPassword(result.data.password);
       setError(false);
-      navigate('/');
+      navigate("/");
     } catch (error) {
       setError(true);
       console.log(error);

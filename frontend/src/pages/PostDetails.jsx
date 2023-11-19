@@ -187,7 +187,7 @@ const PostDetails = () => {
 
 
 
-            <img src={post.photo} className="w-full mx-auto mt-8" alt=""/>
+            <img src={post.photo} className="w-[500px] h-[300px] mx-auto mt-8" alt=""/>
            
             <p className="mx-auto mt-8">{post.desc}</p>
             <div className="flex items-center mt-8 space-x-4 font-semibold">

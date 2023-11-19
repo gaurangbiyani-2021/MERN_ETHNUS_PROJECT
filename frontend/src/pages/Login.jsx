@@ -18,7 +18,7 @@ const Login = () => {
       const result = await axios.post('http://localhost:8800/api/auth/login', { email, password }, { withCredentials: true });
       setUser(result.data);
       console.log('login successful');
-      navigate('/');
+      navigate("/");
     } catch (error) {
       setError(true);
       console.log(error);

@@ -13,14 +13,10 @@ import MyBlogs from './pages/MyBlogs'
 import Team from './pages/Team'
 import ContactUs from './pages/ContactUs'
 
+
 import { UserContextProvider } from './context/UserContext'
 
 export default function App() {
-
-  const dash = () => {
-    window.location.href = "./src/pages/home.html";
-    return <></>;
-  };
   
   return (
     

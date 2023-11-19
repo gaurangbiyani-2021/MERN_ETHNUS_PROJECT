@@ -66,7 +66,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         {/* <h1>NEWSIY</h1> */}
-        <a href='/'>Newsify</a>
+        <a href="/">Newsify</a>
       </div>
     </nav>
   );

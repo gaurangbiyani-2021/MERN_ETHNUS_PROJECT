@@ -82,13 +82,28 @@ const Navbar = () => {
     <input onChange={(e)=>setPrompt(e.target.value)} className="outline w-[500px] outline-offset-2 px-3 " placeholder="Search a post" type="text"/>
     
     </div>
-    <div className="hidden md:flex items-center justify-center space-x-2 md:space-x-4">
-      {user? <h3><Link to="/write">Write</Link></h3> :<h3><Link to="/login">Login</Link></h3>}
+    <div className="hidden mr-3 ml-3 md:flex items-center justify-center space-x-2 md:space-x-4">
+      {user? 
+        <a href="/write" class="relative inline-block px-4 py-2 font-medium group">
+        <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+        <span class="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
+        <span class="relative text-black group-hover:text-white">Write</span>
+        </a>
+        // <h3><Link to="/write">Write</Link></h3> 
+        :<h3><Link to="/login">Login</Link></h3>}
       {user? <div onClick={showMenu}>
         <p className="cursor-pointer relative"><FaBars/></p>
         {menu && <Menu/>}
-      </div>:<h3><Link to="/register">Register</Link></h3>}
-      <h3><Link to="/team">About Us</Link></h3>
+      </div>:
+      
+      <h3><Link to="/register">Register</Link></h3>}
+      
+      <a href="/team" class="relative inline-block px-4 py-2 font-medium group">
+        <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+        <span class="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
+        <span class="relative text-black group-hover:text-white">About us</span>
+      </a>
+      {/* <h3><Link to="/team">About Us</Link></h3> */}
     </div>
     <div onClick={showMenu} className="md:hidden text-lg">
       <p className="cursor-pointer relative"><FaBars/></p>
