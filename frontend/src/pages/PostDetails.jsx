@@ -11,7 +11,6 @@ import { useState,useEffect, useContext,useRef} from 'react'
 import axios from 'axios'
 import { UserContext } from '../context/UserContext'
 import Loader from '../components/Loader'
-// import { IMGURL } from '../url.js'
 import { Navigate, useNavigate } from 'react-router-dom'
 
 
@@ -57,7 +56,6 @@ const PostDetails = () => {
         const post ={
             title,
             desc,
-            // username:user.username,
             userId:user._id,
             categories:cats,
             like:like+1
@@ -89,7 +87,7 @@ const PostDetails = () => {
         const post ={
             title,
             desc,
-            // username:user.username,
+            
             userId:user._id,
             categories:cats,
             dislike:dislike+1
@@ -98,8 +96,12 @@ const PostDetails = () => {
         console.log("post >>>>> "+dislike);
 
         if(dislike >10){
+<<<<<<< HEAD
             const res = await axios.delete("https://newsify-3azj.onrender.com/api/posts/"+postId,{withCredentials:true});
             // window.location.reload(true);
+=======
+            const res = await axios.delete("http://localhost:8800/api/posts/"+postId,{withCredentials:true});
+>>>>>>> 679ee10f05b86f7e2601c157b50cf7ba2bf495c4
             navigate("/")
         }
 
@@ -220,8 +222,7 @@ const PostDetails = () => {
                 {comments?.map((c)=>(
                         <Comment key={c._id} c={c} post={post}/>
                 ))}
-                {/* write a Comments */}
-                
+                   
                 <div className="w-full flex flex-col mt-4 md:flex-row">
                     <input onChange={(e)=>setComment(e.target.value)} type="text" placeholder="Write a comment" className="md:w-[80%] outline-none py-2 px-4 mt-4 md:mt-0"/>
                     <button onClick={postComments} className="bg-black text-sm text-white px-2 py-2 md:w-[20%] mt-4 md:mt-0">Add Comment</button>
