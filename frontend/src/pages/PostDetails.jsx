@@ -96,12 +96,7 @@ const PostDetails = () => {
         console.log("post >>>>> "+dislike);
 
         if(dislike >10){
-<<<<<<< HEAD
-            const res = await axios.delete("https://newsify-3azj.onrender.com/api/posts/"+postId,{withCredentials:true});
-            // window.location.reload(true);
-=======
             const res = await axios.delete("http://localhost:8800/api/posts/"+postId,{withCredentials:true});
->>>>>>> 679ee10f05b86f7e2601c157b50cf7ba2bf495c4
             navigate("/")
         }
 
