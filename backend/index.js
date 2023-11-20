@@ -15,7 +15,7 @@ dotenv.config();
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());  // Use express.json() for parsing JSON bodies
-app.use(cors({origin:"https://newsify-frontend.onrender.com",credentials:true}))
+app.use(cors({origin:"https://newsifyfrontend.vercel.app/",credentials:true}))
 app.use(cookieParser());
 app.set("trust proxy", 1);
 // app.use("/images",express.static(path.join(__dirname,"/images")))
