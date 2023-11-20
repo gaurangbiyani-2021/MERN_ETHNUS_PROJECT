@@ -44,7 +44,8 @@ export const login = async (req,res)=>{
         const token=jwt.sign({_id:user._id,username:user.username,email:user.email},process.env.SECRET,{expiresIn:"3d"})
         const {password,...info}=user._doc
         // cookie will be set
-        res.cookie("token",token).status(200).json(info)
+        // res.cookie("token",token).status(200).json(info)
+         res.cookie("token", token, { domain: ".onrender.com", httpOnly: true, secure: true, sameSite: "none" }).status(200).json(info);
         console.log("login successful");
     }
     catch(err){
